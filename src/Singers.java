@@ -6,7 +6,7 @@ public class Singers {
         private String singerAddress;
         private Date dateOfBirth;
         private int noOfAlbPublished;
-
+    //constructor
     public Singers(){
         this.singerId = 0;
         this.singerName = "";
@@ -14,7 +14,34 @@ public class Singers {
         this.dateOfBirth = null;
         this.noOfAlbPublished = 0;
     }
+    public Singers(int singerId){
+        this.singerId = singerId;
+    }
+    public Singers(int singerId, String singerName){
+        this.singerId = singerId;
+        this.singerName = singerName;
+    }
+    public Singers(int singerId, String singerName, String singerAddress){
+        this.singerId = singerId;
+        this.singerName = singerName;
+        this.singerAddress = singerAddress;
 
+    }
+    public Singers(int singerId, String singerName, String singerAddress, Date dateOfBirth){
+        this.singerId = singerId;
+        this.singerName = singerName;
+        this.singerAddress = singerAddress;
+        this.dateOfBirth = dateOfBirth;
+
+    }
+    public Singers(int singerId, String singerName, String singerAddress,Date dateOfBirth, int noOfAlbPublished){
+        this.singerId = singerId;
+        this.singerName = singerName;
+        this.singerAddress = singerAddress;
+        this.dateOfBirth = dateOfBirth;
+        this.noOfAlbPublished = noOfAlbPublished;
+    }
+    //get and set
     public int getSingerId() {
         return singerId;
     }
@@ -47,6 +74,7 @@ public class Singers {
     public void setNoOfAlbPublished(int noOfAlbPublished) {
         this.noOfAlbPublished = noOfAlbPublished;
     }
+    //All
     public void setWhole(int singerId,String singerName,String singerAddress,Date dateOfBirth,int noOfAlbPublished) {
         this.singerId = singerId;
         this.singerName = singerName;
@@ -54,6 +82,7 @@ public class Singers {
         this.dateOfBirth = dateOfBirth;
         this.noOfAlbPublished = noOfAlbPublished;
     }
+    //Display
     public void displaySingerDetails() {
         System.out.println("Singer ID: " + singerId);
         System.out.println("Singer Name: " + singerName);
